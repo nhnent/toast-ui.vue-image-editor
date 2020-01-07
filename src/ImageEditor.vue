@@ -34,6 +34,7 @@ export default {
         }
         this.editorInstance = new ImageEditor(this.$refs.tuiImageEditor, options);
         this.addEventListener();
+        this.$emit('load', this.editorInstance)
     },
     destroyed() {
         Object.keys(this.$listeners).forEach(eventName => {
