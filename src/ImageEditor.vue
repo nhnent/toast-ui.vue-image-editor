@@ -28,9 +28,9 @@ export default {
     }
   },
   mounted() {
-    let options = editorDefaultOptions;
+    let {options} = this;
     if (this.includeUi) {
-      options = Object.assign(includeUIOptions, this.options);
+      options = Object.assign(includeUIOptions, options);
     }
     this.editorInstance = new ImageEditor(this.$refs.tuiImageEditor, options);
     this.addEventListener();
